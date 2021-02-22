@@ -1,0 +1,50 @@
+<div class="header bg-gradient-danger pb-8 pt-5 pt-md-8">
+</div>
+<!-- Page content -->
+<div class="container-fluid mt--6">
+  <!-- Table -->
+  
+  <div class="card-body px-lg-5 py-lg-5">
+    
+    <form role="form" [formGroup]="this.form">
+        <div class="form-group">
+            <div class="input-group input-group-alternative mb-3">
+             
+              <input class="form-control" formControlName="task_swon" placeholder="WON/SWON" type="text">
+            </div>
+          </div>
+      <div class="form-group">
+        <div class="input-group input-group-alternative mb-3">
+          
+          <input class="form-control" formControlName="task_name" placeholder="Task Name" type="text">
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="input-group input-group-alternative mb-3">
+          
+          <input class="form-control" placeholder="Task Category" formControlName="task_category" type="text">
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="input-group input-group-alternative">
+          
+          <input class="form-control" placeholder="Working hours" formControlName="task_hours" type="text">
+        </div>
+      </div>
+      <!-- <div class="row my-4">
+        <div class="col-12">
+          <div class="custom-control custom-control-alternative custom-checkbox">
+            <input class="custom-control-input" id="customCheckRegister" type="checkbox">
+            <label class="custom-control-label" for="customCheckRegister">
+              <span class="text-muted">I agree with the <a href="#!">Privacy Policy</a></span>
+            </label>
+          </div>
+        </div>
+      </div> -->
+      <div class="text-center">
+        <button type="button" class="btn btn-primary mt-4" (click)="saveTask()">Save Task</button>
+      </div>
+    </form>
+  </div>
+</div>
+

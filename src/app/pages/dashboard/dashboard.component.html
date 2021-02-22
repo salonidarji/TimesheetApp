@@ -1,0 +1,58 @@
+<div class="header bg-gradient-danger pb-8 pt-5 pt-md-8">
+</div>
+<!-- Page content -->
+<div class="container-fluid mt--8">
+  <!-- Table -->
+  
+  <a class="btn btn-secondary btn-circle btn-circle-lg m-1" routerLinkActive="active" [routerLink]="['/add-task']"><i class="fa fa-calendar"></i> Add Task</a>
+  
+  <!-- Dark table -->
+  <div class="row mt-4">
+
+    <div class="col">
+      <div class="card bg-default shadow">
+        <div class="card-header bg-transparent border-0">
+          <h3 class="text-white mb-0">Timesheet History</h3>
+        </div>
+        <div class="table-responsive">
+          <table class="table align-items-center table-dark table-flush" >
+            <thead class="thead-dark">
+              <tr>
+                <th scope="col">Date</th>
+                <th scope="col">WON/SWON</th>
+                <th scope="col">Task Name</th>
+                <th scope="col">Task Category</th>
+                <th scope="col">hours</th>
+                <th scope="col"></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let item of taskArr">
+                <th scope="row">
+                 {{item.task_date}}
+                </th>
+                <td>
+                  {{item.task_swon}}
+                </td>
+                <td>
+                 {{item.task_name}}
+                </td>
+                <td>
+                {{item.task_category}}
+                </td>
+                <td>
+                  {{item.task_hours}}
+                </td>
+                <td class="text-center">
+                  <button class="btn btn-secondary btn-block" (click)="onEdit()">Edit</button>
+                  
+                </td>
+              </tr>
+           
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
